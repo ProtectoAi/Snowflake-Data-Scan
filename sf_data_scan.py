@@ -62,7 +62,8 @@ def prepare_payload(data_source_name, object_name, columns, rows):
 
     for row in rows:
         for col, value in zip(columns, row):
-            column_samples[col].append(f"{col}: {value}")
+            column_samples[col].append(value if value else '')
+
 
     for column_name, samples in column_samples.items():
         payload["data_samples"].append({
@@ -150,7 +151,7 @@ def save_report(report, output_file):
 
 # Main function
 def main(base_url, credentials_file, table_list_file, num_rows, output_file):
-    data_source_name = "SF_DS"
+    data_source_name = "SF_DATA_SOURCE"
     credentials = load_credentials(credentials_file)
     auth_key = credentials["protecto_api_key"]
     table_list = load_table_list(table_list_file)
