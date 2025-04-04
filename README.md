@@ -1,6 +1,7 @@
 # Snowflake Data Scan
 
 This script connects to a Snowflake database, retrieves data from specified tables, submits it for data scanning, tracks the scan status, and saves the results to an Excel file.
+Explore Protecto data scanning API documentation in [https://docs.protecto.ai/docs/data-scan-async/](https://docs.protecto.ai/docs/data-scan-async/).
 
 ## Prerequisites
 
