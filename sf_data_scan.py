@@ -138,8 +138,8 @@ def save_report(report, output_file):
             first_row = ws.max_row + 1
             if pi_details:
                 for pi_detail in pi_details:
-                    ws.append(['.'.join(detail["object_name"]),column['column_name'], column['values_scanned'], pi_detail['identified_count'],
-                               pi_detail['identified_percentage'], pi_detail['pi_type']])
+                    ws.append(['.'.join(detail["object_name"]),column['column_name'], column['values_scanned'], min(pi_detail['identified_count'],column['values_scanned']),
+                               min(pi_detail['identified_percentage'],100), pi_detail['pi_type']])
                 last_row = ws.max_row
                 if last_row > first_row:
                     ws.merge_cells(start_row=first_row, start_column=1, end_row=last_row, end_column=1)
