@@ -35,7 +35,7 @@ Store your Snowflake credentials and Protecto API key in a JSON file (e.g., `cre
 }
 ```
 
-To get the Protecto API key, please contact [help@protecto.ai](mailto:help@protecto.ai).
+To get the Protecto API key, please signup for Protecto trial [https://portal.protecto.ai/](https://portal.protecto.ai/).
 
 ### 2. Table List File
 
